@@ -1,8 +1,4 @@
-import {
-  SET_PRODUCTS,
-  SELECTED_PRODUCT,
-  REMOVE_SELECTED_PRODUCT,
-} from '../constants/actionTypes'
+import { SET_PRODUCTS } from '../constants/actionTypes'
 
 export default (state = [], { type, payload }) => {
   switch (type) {
@@ -12,8 +8,3 @@ export default (state = [], { type, payload }) => {
       return state
   }
 }
-
-export const setProducts = products => ({
-  type: SET_PRODUCTS,
-  payload: products,
-})

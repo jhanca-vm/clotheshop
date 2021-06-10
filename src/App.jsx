@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import styled from 'styled-components'
 import Header from './components/Header'
 import Products from './components/Products'
+import ProductDetails from './components/ProductDetails'
 
 const Main = styled.main`
   padding: 0 24px;
@@ -20,6 +21,7 @@ const App = () => (
       <MainContainer>
         <Switch>
           <Route exact path="/" component={Products} />
+          <Route path="/product/:productId" component={ProductDetails} />
         </Switch>
       </MainContainer>
     </Main>

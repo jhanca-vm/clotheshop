@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import axios from 'axios'
-import { setProducts } from '../../reducers/products'
+import { SET_PRODUCTS } from '../../constants/actionTypes'
 import Catalogue from './Catalogue'
 
 const Products = () => {
@@ -16,7 +16,7 @@ const Products = () => {
             category !== 'electronics' && category !== 'jewelery'
         )
       )
-      .then(products => dispatch(setProducts(products)))
+      .then(products => dispatch({ type: SET_PRODUCTS, payload: products }))
   }, [])
 
   return <Catalogue />

@@ -25,6 +25,7 @@ const Section = styled.section`
 
 const Ancle = styled(Link)`
   background-color: white;
+  border-radius: 0.5rem;
   box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.1),
     0 4px 4px -1px rgba(0, 0, 0, 0.06);
   display: flex;
